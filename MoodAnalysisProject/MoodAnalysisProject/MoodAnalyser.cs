@@ -9,11 +9,16 @@
         }
         public string AnalayseMood()
         {
-            if (message.Contains("Sad"))
-                return "SAD";
-            else
+            try {
+                if (message.Contains("Sad"))
+                    return "SAD";
+                else
+                    return "HAPPY";
+            }catch (NullReferenceException)
+            {
                 return "HAPPY";
-        }
+            }
+         }
 
     }
 }

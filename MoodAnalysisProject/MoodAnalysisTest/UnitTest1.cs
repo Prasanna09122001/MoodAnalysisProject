@@ -21,5 +21,14 @@ namespace MoodAnalysisTest
             string actual = analyser.AnalayseMood();
             Assert.AreEqual(actual, "HAPPY");
         }
+
+        [Test]
+        public void GivenNullMessage_WhenAnalsyse_SholudReturnSad()
+        {
+            string message = "I am in Null Mood";
+            MoodAnalyser analyser = new MoodAnalyser(message);
+            string actual = analyser.AnalayseMood();
+            Assert.AreEqual(actual, "HAPPY");
+        }
     }
 }
